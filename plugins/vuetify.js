@@ -2,9 +2,10 @@ import Vue from 'vue'
 import Vuetify from 'vuetify/lib'
 import colors from 'vuetify/es5/util/colors'
 import '@mdi/font/css/materialdesignicons.css'
+import '@fortawesome/fontawesome-free/css/all.css'
 
 Vue.use(Vuetify, {
-  iconfont: 'mdi'
+  iconfont: 'md' || 'mdi' || 'fa' || 'fa4'
 })
 
 Vue.use(Vuetify, {

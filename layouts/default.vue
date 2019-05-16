@@ -50,7 +50,7 @@
       </v-btn>
       <a class="link" href="/"><v-toolbar-title v-text="title" /></a>
       <v-spacer />
-      <a class="links" href="/home"><v-toolbar-title v-text="title1" /></a>
+      <a class="links" href="/"><v-toolbar-title v-text="title1" /></a>
       <a class="links" href="/about"><v-toolbar-title v-text="title2" /></a>
       <a class="links" href="/services"><v-toolbar-title v-text="title3" /></a>
       <a class="links" href="/contact"><v-toolbar-title v-text="title4" /></a>
@@ -134,6 +134,5 @@ export default {
   color:whitesmoke;
   text-decoration: none;
   padding: 20px;
-  text-align: right
 }
 </style>
