@@ -112,7 +112,7 @@
           large
           left
         >
-         fab fa-twitter
+          fab fa-twitter
         </v-icon>
         <span class="title font-weight-light">Twitter</span>
       </v-card-title>
@@ -139,12 +139,12 @@
             justify-end
           >
             <v-icon class="mr-1">
-              favorite_border
+              far fa-heart
             </v-icon>
             <span class="subheading mr-2">256</span>
             <span class="mr-1">·</span>
             <v-icon class="mr-1">
-              share
+              fas fa-share-alt
             </v-icon>
             <span class="subheading">45</span>
           </v-layout>
