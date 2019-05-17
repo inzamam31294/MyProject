@@ -9,6 +9,7 @@
       sm8
       md6
     >
+      <div><Layout /></div>
       <div class="text-xs-center">
         <logo />
         <vuetify-logo />
@@ -67,17 +68,27 @@
         </v-card-actions>
       </v-card>
     </v-flex>
+    <!-- </v-layout> -->
   </v-layout>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
 import VuetifyLogo from '~/components/VuetifyLogo.vue'
+import Layout from '~/components/default.vue'
 
 export default {
   components: {
     Logo,
-    VuetifyLogo
+    VuetifyLogo,
+    Layout
   }
 }
 </script>
+
+<style scoped>
+.text-xs-center{
+  padding-top: 100px;
+  background-attachment: fixed;
+}
+</style>

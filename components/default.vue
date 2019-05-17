@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <div>
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -28,9 +28,10 @@
       :clipped-left="clipped"
       fixed
       app
+      dark
     >
       <v-toolbar-side-icon @click="drawer = !drawer" />
-      <v-btn
+      <!-- <v-btn
         icon
         @click.stop="miniVariant = !miniVariant"
       >
@@ -47,28 +48,29 @@
         @click.stop="fixed = !fixed"
       >
         <v-icon>remove</v-icon>
-      </v-btn>
+      </v-btn> -->
       <a class="link" href="/"><v-toolbar-title v-text="title" /></a>
       <v-spacer />
       <a class="links" href="/"><v-toolbar-title v-text="title1" /></a>
       <a class="links" href="/about"><v-toolbar-title v-text="title2" /></a>
-      <a class="links" href="/services"><v-toolbar-title v-text="title3" /></a>
-      <a class="links" href="/contact"><v-toolbar-title v-text="title4" /></a>
-      <!-- <v-spacer /> -->
-      <v-btn
+      <a class="links" href="/contact"><v-toolbar-title v-text="title3" /></a>
+      <a class="links" href="/login"><v-toolbar-title v-text="title4" /></a>
+      <a class="links" href="/signup"><v-toolbar-title v-text="title5" /></a>
+      <!-- <v-btn
         icon
         @click.stop="rightDrawer = !rightDrawer"
       >
         <v-icon>menu</v-icon>
-      </v-btn>
+      </v-btn> -->
     </v-toolbar>
-    <v-content>
-      <v-container>
-        <nuxt />
-      </v-container>
-    </v-content>
-    <v-navigation-drawer
+    <!-- <v-content>
+      <v-container> -->
+    <nuxt />
+    <!-- </v-container>
+    </v-content> -->
+    <!-- <v-navigation-drawer
       v-model="rightDrawer"
+      class="navbar"
       :right="right"
       temporary
       fixed
@@ -83,14 +85,15 @@
           <v-list-tile-title>Switch drawer (click me)</v-list-tile-title>
         </v-list-tile>
       </v-list>
-    </v-navigation-drawer>
+    </v-navigation-drawer> -->
     <v-footer
       :fixed="fixed"
       app
+      dark
     >
       <span>&copy; 2019</span>
     </v-footer>
-  </v-app>
+  </div>
 </template>
 
 <script>
@@ -118,8 +121,9 @@ export default {
       title: 'Welcome!',
       title1: 'Home',
       title2: 'About',
-      title3: 'Services',
-      title4: 'Contact'
+      title3: 'Contact',
+      title4: 'Login',
+      title5: 'Signup'
     }
   }
 }
@@ -127,11 +131,12 @@ export default {
 
 <style scoped>
 .link {
-  color:whitesmoke;
+  color: whitesmoke;
   text-decoration: none;
+  padding: 10px
 }
 .links {
-  color:whitesmoke;
+  color: whitesmoke;
   text-decoration: none;
   padding: 20px;
 }

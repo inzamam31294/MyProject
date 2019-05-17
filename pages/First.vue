@@ -4,7 +4,6 @@
     style="max-width: 400px; margin: auto;"
     class="grey lighten-3"
   >
-    <!-- <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet"> -->
     <v-card>
       <v-container
         fluid
