@@ -3,7 +3,6 @@ import Vuetify from 'vuetify/lib'
 import colors from 'vuetify/es5/util/colors'
 import '@mdi/font/css/materialdesignicons.css'
 import '@fortawesome/fontawesome-free/css/all.css'
-// const { VuetifyProgressiveModule } = require('vuetify-loader')
 
 Vue.use(Vuetify, {
   iconfont: 'md' || 'mdi' || 'fa' || 'fa4'

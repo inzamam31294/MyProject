@@ -1,5 +1,6 @@
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 // const { VuetifyProgressiveModule } = require('vuetify-loader')
+// require('typeface-poppins')
 const pkg = require('./package')
 
 module.exports = {

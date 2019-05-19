@@ -14,30 +14,29 @@
               placeholder="Enter your Username"
               required
             />
-            <div class="login-fields m-b-23">
-              <span class="login-inputs">Password</span>
-              <v-text-field
-                id="password"
-                v-model="password"
-                class="input"
-                type="password"
-                placeholder="Enter your Password"
-                required
-              />
-            </div>
           </div>
-          <div class="text-right p-t-8 p-b-31">
+          <div class="login-fields m-b-10">
+            <span class="login-inputs">Password</span>
+            <v-text-field
+              id="password"
+              v-model="password"
+              class="input"
+              type="password"
+              placeholder="Enter your Password"
+              required
+            />
+          </div>
+          <div class="text-right p-t-8 p-b-20">
             <router-link to="#" class="forgotpassword">
               Forgot Password?
             </router-link>
-            <div class="container-loginbtn">
-              <div class="wrap-loginbtn">
-                <div class="loginbtn-form">
-                  <button class="login-btn">
-                    Login
-                  </button>
-                </div>
-              </div>
+          </div>
+          <div class="container-login100-form-btn">
+            <div class="wrap-login100-form-btn">
+              <div class="login100-form-bgbtn" />
+              <button class="login100-form-btn">
+                Login
+              </button>
             </div>
           </div>
         </form>
@@ -73,6 +72,7 @@ div{
 }
 .wrap-login{
     width: 500px;
+    height: 650px;
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
@@ -107,8 +107,8 @@ form{
   line-height: 1.2;
   text-align: center;
 }
-.m-b-23{
-  margin-bottom: 23px
+.m-b-20{
+  margin-bottom: 20px
 }
 .login-inputs{
   font-family: Arial, Helvetica, sans-serif;
@@ -141,32 +141,72 @@ form{
 .p-t-8{
   padding-top: 8px
 }
-.p-b-31{
-  padding-bottom: 31px
+.p-b-10{
+  padding-bottom: 10px
 }
-.container-loginbtn{
+.container-login100-form-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  flex-wrap: wrap
 }
-.wrap-loginbtn{
-  display: block;
+.wrap-login100-form-btn {
   width: 100%;
+  display: block;
   position: relative;
-  border-radius: 25px;
-  margin: 0 auto;
-  overflow: hidden;
   z-index: 1;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 0 auto;
+
+  box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
+  -moz-box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
+  -webkit-box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
+  -o-box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
+  -ms-box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
 }
-.loginbtn-form{
+.login100-form-bgbtn {
   position: absolute;
   z-index: -1;
   width: 300%;
   height: 100%;
+  background: #a64bf4;
+  background: -webkit-linear-gradient(to left, #00dbde, #fc00ff, #00dbde, #fc00ff);
+  background: -o-linear-gradient(to left, #00dbde, #fc00ff, #00dbde, #fc00ff);
+  background: -moz-linear-gradient(to left, #00dbde, #fc00ff, #00dbde, #fc00ff);
+  background: linear-gradient(to left, #00dbde, #fc00ff, #00dbde, #fc00ff);
   top: 0;
   left: -100%;
-  transition: all 0.4s
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
 }
+.login100-form-btn {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 50px;
+}
+.wrap-login100-form-btn:hover .login100-form-bgbtn {
+  left: 0;
+}
+
 </style>
 
 // http://markinternational.info/data/out/1/218520820-1440-wallpapers.jpg
