@@ -9,11 +9,13 @@
       sm8
       md6
     >
-      <div><Layout /></div>
-      <div class="text-xs-center">
+      <div>
+        <Layout />
+      </div>
+      <v-container class="text-xs-center">
         <logo />
         <vuetify-logo />
-      </div>
+      </v-container>
       <v-card>
         <v-card-title class="headline">
           Welcome to the Vuetify + Nuxt.js template
@@ -68,7 +70,6 @@
         </v-card-actions>
       </v-card>
     </v-flex>
-    <!-- </v-layout> -->
   </v-layout>
 </template>
 

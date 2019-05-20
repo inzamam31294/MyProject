@@ -4,10 +4,14 @@
     style="max-width: 400px; margin: auto;"
     class="grey lighten-3"
   >
+    <v-container>
+      <layout />
+    </v-container>
     <v-card>
       <v-container
         fluid
         grid-list-lg
+        class="content-padding"
       >
         <v-layout row wrap>
           <v-flex xs12>
@@ -97,66 +101,80 @@
               </v-card-actions>
             </v-card>
           </v-flex>
+          <v-flex xs12>
+            <v-card
+              class="mx-auto"
+              color="#26c6da"
+              dark
+              max-width="400"
+            >
+              <v-card-title>
+                <v-icon
+                  large
+                  left
+                >
+                  fab fa-twitter
+                </v-icon>
+                <span class="title font-weight-light">Twitter</span>
+              </v-card-title>
+
+              <v-card-text class="headline font-weight-bold">
+                "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."
+              </v-card-text>
+
+              <v-card-actions>
+                <v-list-tile class="grow">
+                  <v-list-tile-avatar color="grey darken-3">
+                    <v-img
+                      class="elevation-6"
+                      src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                    />
+                  </v-list-tile-avatar>
+
+                  <v-list-tile-content>
+                    <v-list-tile-title>Evan You</v-list-tile-title>
+                  </v-list-tile-content>
+
+                  <v-layout
+                    align-center
+                    justify-end
+                  >
+                    <v-icon class="mr-1">
+                      far fa-heart
+                    </v-icon>
+                    <span class="subheading mr-2">256</span>
+                    <span class="mr-1">·</span>
+                    <v-icon class="mr-1">
+                      fas fa-share-alt
+                    </v-icon>
+                    <span class="subheading">45</span>
+                  </v-layout>
+                </v-list-tile>
+              </v-card-actions>
+            </v-card>
+          </v-flex>
         </v-layout>
       </v-container>
-    </v-card>
-    <v-card
-      class="mx-auto"
-      color="#26c6da"
-      dark
-      max-width="400"
-    >
-      <v-card-title>
-        <v-icon
-          large
-          left
-        >
-          fab fa-twitter
-        </v-icon>
-        <span class="title font-weight-light">Twitter</span>
-      </v-card-title>
-
-      <v-card-text class="headline font-weight-bold">
-        "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."
-      </v-card-text>
-
-      <v-card-actions>
-        <v-list-tile class="grow">
-          <v-list-tile-avatar color="grey darken-3">
-            <v-img
-              class="elevation-6"
-              src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
-            />
-          </v-list-tile-avatar>
-
-          <v-list-tile-content>
-            <v-list-tile-title>Evan You</v-list-tile-title>
-          </v-list-tile-content>
-
-          <v-layout
-            align-center
-            justify-end
-          >
-            <v-icon class="mr-1">
-              far fa-heart
-            </v-icon>
-            <span class="subheading mr-2">256</span>
-            <span class="mr-1">·</span>
-            <v-icon class="mr-1">
-              fas fa-share-alt
-            </v-icon>
-            <span class="subheading">45</span>
-          </v-layout>
-        </v-list-tile>
-      </v-card-actions>
     </v-card>
   </div>
 </template>
 
 <script>
+import Layout from '~/components/default.vue'
+
 export default {
   el: '#e3',
+  components: {
+    Layout
+  },
   data: () => ({
   })
 }
 </script>
+
+<style scoped>
+.content-padding{
+  padding-top: 50px;
+  padding-bottom: 50px
+}
+</style>
