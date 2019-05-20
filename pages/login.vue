@@ -1,7 +1,7 @@
 
 <template>
-  <div class="limiter">
-    <v-layout class="login-container">
+  <div class="limiter" onload="randombg()">
+    <v-layout id="random" class="login-container">
       <div class="wrap-login p-l-55 p-r-55 p-t-65 p-b-54">
         <form class="loginform">
           <span class="title-login p-b-49">Login</span>
@@ -75,6 +75,20 @@
   </div>
 </template>
 
+<script>
+// export default {
+
+// }
+// function randombg() {
+//   const random = Math.floor(Math.random() * 4) + 0
+//   const bigSize = ["url('../images/bg-01.jpg')",
+//     "url(' https://backgrounddownload.com/wp-content/uploads/2018/09/colourful-abstract-background-paintings-7.jpg')",
+//     "url('http://eskipaper.com/images/background-wallpapers-7.jpg')",
+//     "url('http://markinternational.info/data/out/1/218520820-1440-wallpapers.jpg')"]
+//   document.getElementById('random').style.backgroundImage = bigSize[random]
+// }
+</script>
+
 <style scoped>
 * {
   margin: 0px;
@@ -88,7 +102,7 @@
 div{
   display: block;
 }
-.login-container{
+#random{
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -98,7 +112,7 @@ div{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url("https://picsum.photos/510/300?random");
+    background-image: url("https://backgrounddownload.com/wp-content/uploads/2018/09/colourful-abstract-background-paintings-7.jpg");
 }
 .wrap-login{
     width: 500px;
