@@ -351,6 +351,15 @@ i::before {
   margin: 5px;
 
 }
+/*//////////////////////////////////////////////////////////////////
+[ Responsive ]*/
+
+@media (max-width: 576px) {
+  .wrap-login {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 </style>
 
 // http://markinternational.info/data/out/1/218520820-1440-wallpapers.jpg
