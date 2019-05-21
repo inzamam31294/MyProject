@@ -3,11 +3,8 @@
   <div class="limiter">
     <v-layout id="random" class="login-container">
       <div class="wrap-login p-l-55 p-r-55 p-t-10 p-b-54">
-        <div class="top-icon">
-          <v-icon class="fas fa-users" size="100" color="blue" />
-        </div>
         <form class="loginform">
-          <span class="title-login p-b-49">Login</span>
+          <span class="title-login p-t-30 p-b-49">Login</span>
           <div class="login-fields m-b-23">
             <!-- <span class="login-inputs">Username</span> -->
             <v-text-field
@@ -19,7 +16,7 @@
               required
             />
           </div>
-          <div class="login-fields m-b-23">
+          <div class="login-fields">
             <!-- <span class="login-inputs">Password</span> -->
             <v-text-field
               id="password"
@@ -30,7 +27,7 @@
               required
             />
           </div>
-          <div class="text-right p-t-8 p-b-20">
+          <div class="text-right p-b-30">
             <router-link to="#" class="forgotpassword">
               Forgot Password?
             </router-link>
@@ -142,12 +139,6 @@ div{
 .p-b-49{
   padding-bottom: 49px
 }
-.top-icon{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 30px
-}
 .login-form{
   width: 100%;
 }
@@ -162,10 +153,11 @@ form{
   color: #333333;
   line-height: 1.2;
   text-align: center;
-  font-weight: bold
+  font-weight: bold;
+  padding-top: 30px;
 }
-.m-b-20{
-  margin-bottom: 20px
+.m-b-30{
+  margin-bottom: 30px
 }
 .m-b-23{
   margin-bottom: 23px;
@@ -187,9 +179,7 @@ form{
   color:#333333;
   text-decoration: none;
 }
-.p-t-8{
-  padding-top: 8px
-}
+
 .p-b-10{
   padding-bottom: 10px
 }
@@ -288,10 +278,16 @@ form{
 /*//////////////////////////////////////////////////////////////////
 [ Responsive ]*/
 
-@media (max-width: 576px) {
+@media (max-width: 580px) {
   .wrap-login {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 480px;
+  }
+}
+@media (max-width: 1366px) and (min-width: 580px) {
+  .wrap-login {
+    width: 450px
   }
 }
 

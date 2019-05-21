@@ -28,9 +28,13 @@
     </v-navigation-drawer>
     <v-toolbar
       :clipped-left="clipped"
+      class="toolbar-header"
       fixed
-      app
+      flat
       dark
+      app
+      scroll-threshold="200"
+      scroll-off-screen
     >
       <v-toolbar-side-icon @click="drawer = !drawer" />
       <!-- <v-btn
@@ -40,7 +44,7 @@
       >
         <v-icon>{{ `chevron_${miniVariant ? 'right' : 'left'}` }}</v-icon>
       </v-btn> -->
-      <v-btn
+      <!-- <v-btn
         icon
         @click.stop="clipped = !clipped"
       >
@@ -51,7 +55,7 @@
         @click.stop="fixed = !fixed"
       >
         <v-icon>remove</v-icon>
-      </v-btn>
+      </v-btn> -->
       <a class="link" href="/"><v-toolbar-title v-text="title" /></a>
       <v-spacer />
       <a class="links" href="/login"><v-toolbar-title v-text="title4" /></a>
@@ -104,22 +108,20 @@
     <v-btn
       class="btn-sidebar-usermenu"
       fab
-      icon
-      :fixed="fixed"
       color="blue"
       style="z-index: 9;"
       @click.stop="rightDrawer = !rightDrawer"
     >
       <v-icon small color="white" class="fas fa-user-friends" />
     </v-btn>
-    <v-footer
+    <!-- <v-footer
       :fixed="fixed"
       class="footer"
       app
       dark
     >
       <span>&copy; 2019</span>
-    </v-footer>
+    </v-footer> -->
   </div>
 </template>
 
@@ -170,7 +172,7 @@ export default {
 
 <style scoped>
 .link {
-  color: whitesmoke;
+  color:whitesmoke;
   text-decoration: none;
   padding: 10px
 }
@@ -179,14 +181,16 @@ export default {
   text-decoration: none;
   padding: 20px;
 }
+.toolbar-header{
+  background: rgba(255,255,255,0);
+}
 .navbar{
   background-color: #000;
 }
 .btn-sidebar-usermenu{
-  position: absolute;
+  position: fixed;
   right: 20px;
-  bottom: 40px;
-  /* padding-bottom: 30px; */
+  bottom: 20px;
 }
 @media (max-width: 500px) {
   .links {
