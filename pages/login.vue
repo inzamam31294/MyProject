@@ -76,9 +76,9 @@
 </template>
 
 <script>
-// export default {
+export default {
 
-// }
+}
 // function randombg() {
 //   const random = Math.floor(Math.random() * 4) + 0
 //   const bigSize = ["url('../images/bg-01.jpg')",
