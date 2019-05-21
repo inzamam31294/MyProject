@@ -35,13 +35,12 @@
       <v-toolbar-side-icon @click="drawer = !drawer" />
       <!-- <v-btn
         icon
-        @click.stop="
-          mini-variant="!miniVariant&quot;"
-        >
-          <v-icon>{{ `chevron_${miniVariant ? 'right' : 'left'}` }}</v-icon>
-        </v-img>
+        -mini-variant-quot-click-stop="
+          mini-variant="
+      >
+        <v-icon>{{ `chevron_${miniVariant ? 'right' : 'left'}` }}</v-icon>
       </v-btn> -->
-      <!-- <v-btn
+      <v-btn
         icon
         @click.stop="clipped = !clipped"
       >
@@ -52,7 +51,7 @@
         @click.stop="fixed = !fixed"
       >
         <v-icon>remove</v-icon>
-      </v-btn> -->
+      </v-btn>
       <a class="link" href="/"><v-toolbar-title v-text="title" /></a>
       <v-spacer />
       <a class="links" href="/login"><v-toolbar-title v-text="title4" /></a>
@@ -106,6 +105,7 @@
       class="btn-sidebar-usermenu"
       fab
       icon
+      :fixed="fixed"
       color="blue"
       style="z-index: 9;"
       @click.stop="rightDrawer = !rightDrawer"
