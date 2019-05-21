@@ -56,7 +56,7 @@
       >
         <v-icon>remove</v-icon>
       </v-btn> -->
-      <a class="link" href="/"><v-toolbar-title v-text="title" /></a>
+      <a class="link" href="/"><v-icon class="fab fa-dev" x-large /></a>
       <v-spacer />
       <a class="links" href="/login"><v-toolbar-title v-text="title4" /></a>
       <a class="links" href="/signup"><v-toolbar-title v-text="title5" /></a>
@@ -82,8 +82,10 @@
           </v-list-tile-action>
           <v-list-tile-title>Username</v-list-tile-title>
           <v-list-tile-action>
-            <v-btn flat icon large>
-              <v-icon class="fas fa-sign-out-alt" large />
+            <v-btn flat icon>
+              <v-icon>
+                mdi-logout
+              </v-icon>
             </v-btn>
           </v-list-tile-action>
         </v-list-tile>
@@ -162,7 +164,6 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Welcome!',
       title4: 'Login',
       title5: 'Signup'
     }
