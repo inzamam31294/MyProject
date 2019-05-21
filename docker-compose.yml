@@ -1,10 +1,13 @@
-version: '2.1'
+version: '3.7'
 
 services:
   my_project:
     image: my_project
     build: .
+    volumes:
+       - .:/app
     environment:
-      NODE_ENV: production
+      NODE_ENV: development
     ports:
       - 3000:3000
+    command: "npm run dev"

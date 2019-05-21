@@ -16,6 +16,14 @@
         <logo />
         <vuetify-logo />
       </v-container>
+      <v-container class="text-xs-center">
+        <logo />
+        <vuetify-logo />
+      </v-container>
+      <v-container class="text-xs-center">
+        <logo />
+        <vuetify-logo />
+      </v-container>
       <v-card>
         <v-card-title class="headline">
           Welcome to the Vuetify + Nuxt.js template

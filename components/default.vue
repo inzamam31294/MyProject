@@ -2,10 +2,12 @@
   <div>
     <v-navigation-drawer
       v-model="drawer"
+      class="navbar"
       :mini-variant="miniVariant"
       :clipped="clipped"
       fixed
       app
+      dark
     >
       <v-list>
         <v-list-tile
@@ -33,10 +35,11 @@
       <v-toolbar-side-icon @click="drawer = !drawer" />
       <!-- <v-btn
         icon
-        @click.stop="miniVariant = !miniVariant"
+        -mini-variant-quot-click-stop="
+          mini-variant="
       >
         <v-icon>{{ `chevron_${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn>
+      </v-btn> -->
       <v-btn
         icon
         @click.stop="clipped = !clipped"
@@ -48,46 +51,70 @@
         @click.stop="fixed = !fixed"
       >
         <v-icon>remove</v-icon>
-      </v-btn> -->
+      </v-btn>
       <a class="link" href="/"><v-toolbar-title v-text="title" /></a>
       <v-spacer />
-      <a class="links" href="/"><v-toolbar-title v-text="title1" /></a>
-      <a class="links" href="/about"><v-toolbar-title v-text="title2" /></a>
-      <a class="links" href="/contact"><v-toolbar-title v-text="title3" /></a>
       <a class="links" href="/login"><v-toolbar-title v-text="title4" /></a>
       <a class="links" href="/signup"><v-toolbar-title v-text="title5" /></a>
-      <!-- <v-btn
-        icon
-        @click.stop="rightDrawer = !rightDrawer"
-      >
-        <v-icon>menu</v-icon>
-      </v-btn> -->
+      <!-- <v-content> -->
     </v-toolbar>
-    <!-- <v-content>
-      <v-container> -->
-    <nuxt />
-    <!-- </v-container>
-    </v-content> -->
-    <!-- <v-navigation-drawer
+    <v-container>
+      <nuxt />
+    </v-container>
+    <!-- </v-content> -->
+    <v-navigation-drawer
       v-model="rightDrawer"
       class="navbar"
       :right="right"
       temporary
       fixed
+      dark
+      color="black"
     >
       <v-list>
-        <v-list-tile @click.native="right = !right">
+        <v-list-tile>
           <v-list-tile-action>
-            <v-icon light>
-              compare_arrows
-            </v-icon>
+            <v-icon class="fas fa-user-circle" color="green" large />
           </v-list-tile-action>
-          <v-list-tile-title>Switch drawer (click me)</v-list-tile-title>
+          <v-list-tile-title>Username</v-list-tile-title>
+          <v-list-tile-action>
+            <v-btn flat icon large>
+              <v-icon class="fas fa-sign-out-alt" large />
+            </v-btn>
+          </v-list-tile-action>
         </v-list-tile>
       </v-list>
-    </v-navigation-drawer> -->
+      <v-list>
+        <v-list-tile>
+          <v-list-tile-action>
+            <v-icon class="fas fa-circle" color="lime green" size="10" />
+          </v-list-tile-action>
+          <v-list-tile-title>Active Friends</v-list-tile-title>
+        </v-list-tile>
+      </v-list>
+      <v-list>
+        <v-list-tile>
+          <v-list-tile-action>
+            <v-icon class="fas fa-circle" color="lime green" size="10" />
+          </v-list-tile-action>
+          <v-list-tile-title>Active Friends</v-list-tile-title>
+        </v-list-tile>
+      </v-list>
+    </v-navigation-drawer>
+    <v-btn
+      class="btn-sidebar-usermenu"
+      fab
+      icon
+      :fixed="fixed"
+      color="blue"
+      style="z-index: 9;"
+      @click.stop="rightDrawer = !rightDrawer"
+    >
+      <v-icon small color="white" class="fas fa-user-friends" />
+    </v-btn>
     <v-footer
       :fixed="fixed"
+      class="footer"
       app
       dark
     >
@@ -105,6 +132,21 @@ export default {
       fixed: false,
       items: [
         {
+          icon: 'home',
+          title: 'Home',
+          to: '/'
+        },
+        {
+          icon: 'info',
+          title: 'About',
+          to: '/about'
+        },
+        {
+          icon: 'fas fa-at',
+          title: 'contact',
+          to: '/contact'
+        },
+        {
           icon: 'bubble_chart',
           title: 'Inspire',
           to: '/inspire'
@@ -119,9 +161,6 @@ export default {
       right: true,
       rightDrawer: false,
       title: 'Welcome!',
-      title1: 'Home',
-      title2: 'About',
-      title3: 'Contact',
       title4: 'Login',
       title5: 'Signup'
     }
@@ -139,5 +178,20 @@ export default {
   color: whitesmoke;
   text-decoration: none;
   padding: 20px;
+}
+.navbar{
+  background-color: #000;
+}
+.btn-sidebar-usermenu{
+  position: absolute;
+  right: 20px;
+  bottom: 40px;
+  /* padding-bottom: 30px; */
+}
+@media (max-width: 500px) {
+  .links {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 </style>
