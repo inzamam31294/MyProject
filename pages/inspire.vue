@@ -1,6 +1,7 @@
 <template>
   <v-layout>
-    <v-flex text-xs-center>
+    <layout />
+    <v-flex text-xs-center class="inspire-body">
       <img
         src="/v.png"
         alt="Vuetify.js"
@@ -17,3 +18,23 @@
     </v-flex>
   </v-layout>
 </template>
+
+<script>
+import Layout from '~/components/default.vue'
+
+export default {
+  el: '#e3',
+  components: {
+    Layout
+  },
+  data: () => ({
+  })
+}
+</script>
+
+<style scoped>
+.inspire-body{
+  padding-top: 100px;
+
+}
+</style>

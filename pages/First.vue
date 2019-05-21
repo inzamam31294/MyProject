@@ -138,6 +138,7 @@
                   <v-layout
                     align-center
                     justify-end
+                    pb-3
                   >
                     <v-icon class="mr-1">
                       far fa-heart

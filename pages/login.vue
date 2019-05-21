@@ -1,8 +1,11 @@
 
 <template>
-  <div class="limiter" onload="randombg()">
+  <div class="limiter">
     <v-layout id="random" class="login-container">
-      <div class="wrap-login p-l-55 p-r-55 p-t-65 p-b-54">
+      <div class="wrap-login p-l-55 p-r-55 p-t-10 p-b-54">
+        <div class="top-icon">
+          <v-icon class="fas fa-users" size="100" color="blue" />
+        </div>
         <form class="loginform">
           <span class="title-login p-b-49">Login</span>
           <div class="login-fields m-b-23">
@@ -76,9 +79,10 @@
 </template>
 
 <script>
-// export default {
-
-// }
+export default {
+  data: () => ({
+  })
+}
 // function randombg() {
 //   const random = Math.floor(Math.random() * 4) + 0
 //   const bigSize = ["url('../images/bg-01.jpg')",
@@ -129,14 +133,20 @@ div{
 .p-r-55{
   padding-right: 55px
 }
-.p-t-65{
-  padding-top: 65px
+.p-t-10{
+  padding-top: 10px;
 }
 .p-b-54{
   padding-bottom: 54px
 }
 .p-b-49{
   padding-bottom: 49px
+}
+.top-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px
 }
 .login-form{
   width: 100%;
@@ -152,6 +162,7 @@ form{
   color: #333333;
   line-height: 1.2;
   text-align: center;
+  font-weight: bold
 }
 .m-b-20{
   margin-bottom: 20px
@@ -272,8 +283,8 @@ form{
 }
 .btn-fb-gm-tw{
   margin: 5px;
-
 }
+
 /*//////////////////////////////////////////////////////////////////
 [ Responsive ]*/
 
@@ -283,6 +294,7 @@ form{
     padding-right: 15px;
   }
 }
+
 </style>
 
 // http://markinternational.info/data/out/1/218520820-1440-wallpapers.jpg
