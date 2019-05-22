@@ -1,39 +1,35 @@
 <template>
   <div>
     <v-app id="inspire" dark>
-      <v-img
-        src="https://images.unsplash.com/photo-1486783046960-64d2ef697c46?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+      <v-layout
+        justify-center
+        align-center
       >
-        <v-layout
-          justify-center
-          align-center
-        >
-          <div>
-            <Layout />
-          </div>
-          <div class="main-header-divider">
-            <div class="text-header-divider">
-              <div class="main-heading">
-                <span class="heading-text">Build Better</span>
-                <span class="dot-text">.</span>
-              </div>
-              <h1 class="class-info">
-                Software Engineering · UX/UI Design · Digital Transformation
-              </h1>
+        <div>
+          <Layout />
+        </div>
+        <div class="main-header-divider">
+          <div class="text-header-divider">
+            <div class="main-heading">
+              <span class="heading-text">Build Better</span>
+              <span class="dot-text">.</span>
             </div>
-            <!-- <div id="myCanvas-wrapper" class="jsx-2143198824" style="opacity: 1;">
+            <h1 class="class-info">
+              Software Engineering <span style="color: #000;">· UX/UI Design ·</span> Digital Transformation
+            </h1>
+          </div>
+          <!-- <div id="myCanvas-wrapper" class="jsx-2143198824" style="opacity: 1;">
               <canvas id="myCanvas" class="jsx-2143198824" width="223" height="147" />
             </div> -->
-          </div>
-        </v-layout>
-        <v-flex
-          pa-5
-        >
-          <div class="card-divider">
-            <!-- <v-card /> -->
-          </div>
-        </v-flex>
-      </v-img>
+        </div>
+      </v-layout>
+      <v-flex
+        pa-5
+      >
+        <div class="card-divider">
+          <!-- <v-card /> -->
+        </div>
+      </v-flex>
     </v-app>
   </div>
   <!-- <v-flex
@@ -59,21 +55,23 @@ export default {
 </script>
 
 <style scoped>
-/* #inspire{
+#inspire{
   background-image: url("https://images.unsplash.com/photo-1486783046960-64d2ef697c46?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
-  justify-content: center;
-  align-content: center;
-} */
-/* div{
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  /* height: 800px; */
+}
+div{
   display: block
-} */
+}
 .text-header-divider{
   display: flex;
   font-family: Altis-Bold,-apple-system,BlinkMacSystemFont,Segoe UI, Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue, sans-serif;
   justify-content: center;
   margin: 0 20px;
   padding-top: 100px;
-  z-index: 10;
+  z-index: 5;
   overflow: hidden;
   text-align: center;
   align-items: center;
@@ -82,9 +80,12 @@ export default {
   flex-direction: column;
   font-weight: bold
 }
+.main-header-divider .text-header-divider{
+  margin: 0 20px;
+}
 .card-divider{
-  width: 1000px;
-  height: 500px;
+  width: 600px;
+  height: 400px;
   margin: auto;
   background: #171c1f;
   box-shadow:0 10px 80px 0 #000;

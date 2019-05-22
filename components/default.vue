@@ -6,6 +6,7 @@
       :mini-variant="miniVariant"
       :clipped="clipped"
       fixed
+      style="z-index: 10;"
       app
       dark
     >
@@ -32,7 +33,7 @@
       fixed
       flat
       dark
-      height="100px"
+      style="z-index: 500;"
       app
       scroll-threshold="200"
       scroll-off-screen
@@ -75,6 +76,7 @@
       :right="right"
       temporary
       fixed
+      style="z-index: 1000;"
       dark
       color="black"
     >
@@ -192,6 +194,8 @@ export default {
 }
 .toolbar-header{
   background: rgba(255,255,255,0);
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .navbar{
   background-color: #000;
