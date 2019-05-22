@@ -23,7 +23,6 @@
 import Layout from '~/components/default.vue'
 
 export default {
-  el: '#e3',
   components: {
     Layout
   },

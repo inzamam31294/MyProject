@@ -1,56 +1,52 @@
 <template>
-  <v-app class="page-app">
-    <v-layout
-      column
-      justify-center
-      align-center
-    >
-      <v-flex
-        xs12
-        sm8
-        md6
-        py-5
+  <div>
+    <v-app id="inspire" dark>
+      <v-img
+        src="https://images.unsplash.com/photo-1486783046960-64d2ef697c46?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
       >
-        <div>
-          <Layout />
-        </div>
-        <!-- <v-container class="text-xs-center">
-          <logo />
-          <vuetify-logo />
-        </v-container> -->
-        <v-card>
-          <!-- <v-card-title class="headline" /> -->
-          <v-parallax
-            height="500"
-            src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"
-          />
-        </v-card>
-      </v-flex>
-      <v-flex
-        xs12
-        sm8
-        md6
-        pa-5
-      >
-        <!-- <v-container class="text-xs-center">
-          <logo />
-          <vuetify-logo />
-        </v-container> -->
-        <v-card>
-          <!-- <v-card-title class="headline" /> -->
-          <v-parallax
-            height="500"
-            src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
-          />
-        </v-card>
-      </v-flex>
-    </v-layout>
-  </v-app>
+        <v-layout
+          justify-center
+          align-center
+        >
+          <div>
+            <Layout />
+          </div>
+          <div class="main-header-divider">
+            <div class="text-header-divider">
+              <div class="main-heading">
+                <span class="heading-text">Build Better</span>
+                <span class="dot-text">.</span>
+              </div>
+              <h1 class="class-info">
+                Software Engineering · UX/UI Design · Digital Transformation
+              </h1>
+            </div>
+            <!-- <div id="myCanvas-wrapper" class="jsx-2143198824" style="opacity: 1;">
+              <canvas id="myCanvas" class="jsx-2143198824" width="223" height="147" />
+            </div> -->
+          </div>
+        </v-layout>
+        <v-flex
+          pa-5
+        >
+          <div class="card-divider">
+            <!-- <v-card /> -->
+          </div>
+        </v-flex>
+      </v-img>
+    </v-app>
+  </div>
+  <!-- <v-flex
+    xs12
+    sm8
+    md6
+    pa-5
+  >
+
+  </v-flex> -->
 </template>
 
 <script>
-// import Logo from '~/components/Logo.vue'
-// import VuetifyLogo from '~/components/VuetifyLogo.vue'
 import Layout from '~/components/default.vue'
 
 export default {
@@ -63,12 +59,81 @@ export default {
 </script>
 
 <style scoped>
-.page-app{
-  background-image: url("https://images.wallpaperscraft.com/image/wall_bricks_texture_117134_3840x2400.jpg")
+/* #inspire{
+  background-image: url("https://images.unsplash.com/photo-1486783046960-64d2ef697c46?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
+  justify-content: center;
+  align-content: center;
+} */
+/* div{
+  display: block
+} */
+.text-header-divider{
+  display: flex;
+  font-family: Altis-Bold,-apple-system,BlinkMacSystemFont,Segoe UI, Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue, sans-serif;
+  justify-content: center;
+  margin: 0 20px;
+  padding-top: 100px;
+  z-index: 10;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+  height: 58vh;
+  position: relative;
+  flex-direction: column;
+  font-weight: bold
 }
-.text-xs-center{
-  padding-top: 20px;
-  background-attachment: fixed;
-  /* background: black; */
+.card-divider{
+  width: 1000px;
+  height: 500px;
+  margin: auto;
+  background: #171c1f;
+  box-shadow:0 10px 80px 0 #000;
+  -webkit-box-shadow: 0 10px 80px 0 #000;
+}
+@media (min-width: 1000px) {
+  .main-heading{
+   font-size: 10rem;
+   line-height: 11.25rem;
+   letter-spacing: -0.5rem;
+   margin-top: 0;
+}
+}@media (min-width: 700px) {
+  .main-heading{
+  font-size: 7rem;
+  width: auto;
+  text-align: center
+}
+}
+@media (min-width: 1000px) {
+  .text-header-divider{
+    padding-bottom: 100px;
+}
+}
+@media (min-width: 700px) {
+  .text-header-divider{
+   height: 80vh;
+   margin: 0;
+}
+}
+.dot-text{
+  color: rgb(0, 186, 64);
+  /* font-size: px; */
+}
+.class-info{
+  color: #89979c;
+  font-family: GT America,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto, Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+  /* font-weight: bold */
+}
+
+@media (min-width: 1000px) {
+.class-info{
+  line-height: 5.5rem;
+  margin-top: 10px
+}
+}
+@media (min-width: 700px) {
+ .text-header-divider .class-info{
+  text-align: center
+}
 }
 </style>

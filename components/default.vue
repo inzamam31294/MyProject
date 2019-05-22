@@ -32,6 +32,7 @@
       fixed
       flat
       dark
+      height="100px"
       app
       scroll-threshold="200"
       scroll-off-screen
@@ -56,7 +57,9 @@
       >
         <v-icon>remove</v-icon>
       </v-btn> -->
-      <a class="link" href="/"><v-icon class="fab fa-dev" x-large /></a>
+      <v-btn flat icon href="/">
+        <v-icon class="fab fa-dev" x-large />
+      </v-btn>
       <v-spacer />
       <a class="links" href="/login"><v-toolbar-title v-text="title4" /></a>
       <a class="links" href="/signup"><v-toolbar-title v-text="title5" /></a>
@@ -81,7 +84,7 @@
             <v-icon class="fas fa-user-circle" color="green" large />
           </v-list-tile-action>
           <v-list-tile-title>Username</v-list-tile-title>
-          <v-list-tile-action>
+          <v-list-tile-action class="btn-logout-listtile">
             <v-btn flat icon>
               <v-icon>
                 mdi-logout
@@ -110,6 +113,7 @@
     <v-btn
       class="btn-sidebar-usermenu"
       fab
+      large
       color="blue"
       style="z-index: 9;"
       @click.stop="rightDrawer = !rightDrawer"
@@ -181,6 +185,10 @@ export default {
   color: whitesmoke;
   text-decoration: none;
   padding: 20px;
+}
+.btn-logout-listtile{
+  justify-content: flex-end;
+  display: flex;
 }
 .toolbar-header{
   background: rgba(255,255,255,0);
