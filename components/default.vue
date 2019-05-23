@@ -32,13 +32,15 @@
       class="toolbar-header"
       fixed
       flat
-      dark
+      light
       style="z-index: 500;"
       app
       scroll-threshold="200"
       scroll-off-screen
     >
-      <v-toolbar-side-icon color="#e69500" @click="drawer = !drawer" />
+      <div class="toolbar-menubtn">
+        <v-toolbar-side-icon color="white" @click="drawer = !drawer" />
+      </div>
       <!-- <v-btn
         icon
         -mini-variant-quot-click-stop="
@@ -58,12 +60,12 @@
       >
         <v-icon>remove</v-icon>
       </v-btn> -->
-      <v-btn flat icon href="/">
-        <v-icon color="#e69500" class="fab fa-dev" x-large />
+      <v-btn class="main-icon" flat icon href="/">
+        <v-icon color="rgb(0, 186, 64)" class="fab fa-dev" x-large />
       </v-btn>
       <v-spacer />
       <a class="links" href="/login"><v-toolbar-title v-text="title4" /></a>
-      <a class="links" href="/signup"><v-toolbar-title v-text="title5" /></a>
+      <a class="links1" href="/signup"><v-toolbar-title v-text="title5" /></a>
       <!-- <v-content> -->
     </v-toolbar>
     <v-container>
@@ -177,12 +179,23 @@ export default {
 </script>
 
 <style scoped>
-.links {
-  color: whitesmoke;
-  text-decoration: none;
-  padding: 20px;
-  color:#e69500;
+.toolbar-menubtn{
+  padding-left: 20px
 }
+.main-icon{
+  padding-left: 20px
+}
+.links {
+  text-decoration: none;
+  padding: 10px;
+  color:whitesmoke;
+}
+.links1 {
+  text-decoration: none;
+  padding: 10px 30px 10px 10px;
+  color:whitesmoke;
+}
+
 .btn-logout-listtile{
   justify-content: flex-end;
   display: flex;
