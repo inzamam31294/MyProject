@@ -6,7 +6,7 @@
       :mini-variant="miniVariant"
       :clipped="clipped"
       fixed
-      style="z-index: 10;"
+      style="z-index: 1000;"
       app
       dark
     >
@@ -116,7 +116,6 @@
       class="btn-sidebar-usermenu"
       fab
       large
-      color="blue"
       style="z-index: 9;"
       @click.stop="rightDrawer = !rightDrawer"
     >

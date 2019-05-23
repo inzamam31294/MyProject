@@ -4,10 +4,13 @@ import colors from 'vuetify/es5/util/colors'
 import '@mdi/font/css/materialdesignicons.css'
 import '@mdi/font/css/materialdesignicons.min.css'
 import '@fortawesome/fontawesome-free/css/all.css'
+import Animation from 'animate.css'
 
 Vue.use(Vuetify, {
   iconfont: 'md' || 'mdi' || 'fa' || 'fa4'
 })
+
+Vue.use(Animation)
 
 Vue.use(Vuetify, {
   theme: {
