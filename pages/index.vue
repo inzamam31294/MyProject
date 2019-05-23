@@ -1,57 +1,119 @@
 <template>
   <div class="main">
-    <v-app id="inspire" dark>
-      <v-layout
-        justify-center
-        align-center
-      >
-        <div>
-          <Layout />
-        </div>
-        <div class="main-header-divider">
-          <div class="text-header-divider">
-            <div class="main-heading">
-              <span class="heading-text">Build Better</span>
-              <span class="dot-text">.</span>
-            </div>
-            <h1 class="class-info">
-              Software Engineering <span class="uiux-color" style="color: whitesmoke;">· UX/UI Design ·</span> Digital Transformation
-            </h1>
+    <div class="main-1">
+      <v-app id="inspire" dark>
+        <v-layout
+          justify-center
+          align-center
+        >
+          <div>
+            <Layout />
           </div>
+          <div class="main-header-divider">
+            <div class="text-header-divider">
+              <div class="main-heading">
+                <span class="heading-text">Build Better</span>
+                <span class="dot-text">.</span>
+              </div>
+              <h1 class="class-info">
+                Software Engineering <span class="uiux-color" style="color: whitesmoke;">· UX/UI Design ·</span> Digital Transformation
+              </h1>
+            </div>
           <!-- <div id="myCanvas-wrapper" class="jsx-2143198824" style="opacity: 1;">
             <canvas id="myCanvas" class="jsx-2143198824" width="2966" height="1471" />
           </div> -->
-        </div>
-      </v-layout>
-      <v-flex
-        pa-5
-        xs12
+          </div>
+        </v-layout>
+        <v-flex
+          pa-5
+          xs12
+        >
+          <div class="card-divider" />
+        </v-flex>
+      </v-app>
+      <v-container
+        class="divder-2"
+        text-xs-center
+        wrap
+        align-content-center
+        justify-center
       >
-        <div class="card-divider" />
-      </v-flex>
-    </v-app>
+        <p class="header-text">
+          Trusted by
+        </p>
+        <div class="brand-division">
+          <v-icon class="fab fa-steam" x-large dark />
+          <v-icon class="fab fa-wizards-of-the-coast" x-large dark />
+          <v-icon class="fab fa-wolf-pack-battalion" x-large dark />
+          <v-icon class="fab fa-wikipedia-w" x-large dark />
+          <v-icon class="fab fa-researchgate" x-large dark />
+          <v-icon class="fab fa-npm" x-large dark />
+          <v-icon class="fab fa-hooli" x-large dark />
+          <v-icon class="fab fa-d-and-d-beyond" x-large dark />
+          <v-icon class="fab fa-critical-role" x-large dark />
+          <v-icon class="fab fa-angrycreative" x-large dark />
+        </div>
+      </v-container>
+      <v-container
+        class="images-division1"
+        text-xs-center
+        wrap
+        align-content-center
+        justify-center
+        fluid
+      >
+        <v-img width="100%" src="https://d33wubrfki0l68.cloudfront.net/eda80536f265142b1eb0fe8e33677e6a1dc2e2e4/b2bde/static/img/pages/home/people.jpg" />
+      </v-container>
+      <v-container
+        class="images-division2"
+        text-xs-center
+        wrap
+        align-content-center
+        justify-center
+        fluid
+      >
+        <v-img absolute src="https://d33wubrfki0l68.cloudfront.net/bac8cd867797d67a9677453aa8d9486622166d28/7c899/static/img/pages/home/process.jpg" />
+      </v-container>
+      <v-container
+        class="images-division3"
+        text-xs-center
+        wrap
+        align-content-center
+        justify-center
+        fluid
+      >
+        <v-img width="100%" src="https://d33wubrfki0l68.cloudfront.net/585004580ab1e448178ef761b55d4f8ac990142d/bef99/static/img/pages/home/technology.jpg" />
+      </v-container>
+    </div>
     <v-container
-      class="divder-2"
+      class="images-division1"
       text-xs-center
       wrap
       align-content-center
       justify-center
+      fluid
     >
-      <p class="header-text">
-        Trusted by
-      </p>
-      <div class="brand-division">
-        <v-icon class="fab fa-steam" x-large dark />
-        <v-icon class="fab fa-wizards-of-the-coast" x-large dark />
-        <v-icon class="fab fa-wolf-pack-battalion" x-large dark />
-        <v-icon class="fab fa-wikipedia-w" x-large dark />
-        <v-icon class="fab fa-researchgate" x-large dark />
-        <v-icon class="fab fa-npm" x-large dark />
-        <v-icon class="fab fa-hooli" x-large dark />
-        <v-icon class="fab fa-d-and-d-beyond" x-large dark />
-        <v-icon class="fab fa-critical-role" x-large dark />
-        <v-icon class="fab fa-angrycreative" x-large dark />
-      </div>
+      <v-img width="100%" src="https://d33wubrfki0l68.cloudfront.net/eda80536f265142b1eb0fe8e33677e6a1dc2e2e4/b2bde/static/img/pages/home/people.jpg" />
+    </v-container>
+    <v-container
+      class="images-division2"
+      text-xs-center
+      wrap
+      align-content-center
+      justify-center
+      fluid
+    >
+      <v-img absolute src="https://d33wubrfki0l68.cloudfront.net/bac8cd867797d67a9677453aa8d9486622166d28/7c899/static/img/pages/home/process.jpg" />
+    </v-container>
+    <v-container
+      class="images-division3"
+      text-xs-center
+      wrap
+      align-content-center
+      justify-center
+      fluid
+    >
+      <v-img width="100%" src="https://d33wubrfki0l68.cloudfront.net/585004580ab1e448178ef761b55d4f8ac990142d/bef99/static/img/pages/home/technology.jpg" />
     </v-container>
   </div>
 </template>
@@ -86,7 +148,7 @@ export default {
 </script>
 
 <style scoped>
-.main{
+.main-1{
   background: #171c1f;
 }
 #inspire{
@@ -118,6 +180,32 @@ div{
 .main-header-divider .text-header-divider{
   margin: 0 20px;
 }
+.main-heading{
+  font-size: 3.4rem;
+  line-height: 1;
+  width: 100%;
+  text-align: left;
+}
+@media (min-width: 1000px) {
+  .main-heading{
+   font-size: 10rem;
+   line-height: 11.25rem;
+   letter-spacing: -0.5rem;
+   margin-top: 0;
+}
+}
+@media (min-width: 700px) {
+  .main-heading{
+  font-size: 10rem;
+  width: auto;
+  text-align: center
+}
+}
+@media (max-width: 700px) {
+  .main-heading{
+  display: inherit;
+}
+}
 .card-divider{
   width: 90%;
   height: 500px;
@@ -145,26 +233,6 @@ div{
     text-transform: uppercase;
     font-weight: bold
 }
-.main-heading{
-  font-size: 4rem;
-  line-height: 1;
-  width: 100%;
-  text-align: left;
-}
-@media (min-width: 1000px) {
-  .main-heading{
-   font-size: 10rem;
-   line-height: 11.25rem;
-   letter-spacing: -0.5rem;
-   margin-top: 0;
-}
-}@media (min-width: 700px) {
-  .main-heading{
-  font-size: 10rem;
-  width: auto;
-  text-align: center
-}
-}
 @media (min-width: 1000px) {
   .text-header-divider{
     padding-bottom: 100px;
@@ -172,7 +240,7 @@ div{
 }
 @media (min-width: 700px) {
   .text-header-divider{
-   height: 80vh;
+   height: 76vh;
    margin: 0;
 }
 }
@@ -258,4 +326,21 @@ h1 .class-info{
     -ms-transform: rotate(-8deg);
     transform: rotate(-8deg);
 } */
+.images-division1{
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-bottom: 150px;
+}
+.images-division2{
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-top: 150px;
+  padding-bottom: 150px;
+}
+.images-division3{
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-top: 150px;
+  padding-bottom: 150px;
+}
 </style>

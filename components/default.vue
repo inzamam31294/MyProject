@@ -38,7 +38,7 @@
       scroll-threshold="200"
       scroll-off-screen
     >
-      <v-toolbar-side-icon @click="drawer = !drawer" />
+      <v-toolbar-side-icon color="#e69500" @click="drawer = !drawer" />
       <!-- <v-btn
         icon
         -mini-variant-quot-click-stop="
@@ -59,7 +59,7 @@
         <v-icon>remove</v-icon>
       </v-btn> -->
       <v-btn flat icon href="/">
-        <v-icon class="fab fa-dev" x-large />
+        <v-icon color="#e69500" class="fab fa-dev" x-large />
       </v-btn>
       <v-spacer />
       <a class="links" href="/login"><v-toolbar-title v-text="title4" /></a>
@@ -177,15 +177,11 @@ export default {
 </script>
 
 <style scoped>
-.link {
-  color:whitesmoke;
-  text-decoration: none;
-  padding: 10px
-}
 .links {
   color: whitesmoke;
   text-decoration: none;
   padding: 20px;
+  color:#e69500;
 }
 .btn-logout-listtile{
   justify-content: flex-end;
