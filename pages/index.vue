@@ -2,6 +2,11 @@
   <div class="main">
     <div class="main-1">
       <v-app id="inspire" dark>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+        <script src="https://unpkg.com/aos@next/dist/aos.js" />
+        <script>
+          AOS.init();
+        </script>
         <v-layout
           justify-center
           align-center
@@ -31,12 +36,8 @@
           <div class="card-divider" />
         </v-flex>
       </v-app>
-      <v-container
+      <div
         class="divder-2"
-        text-xs-center
-        wrap
-        align-content-center
-        justify-center
       >
         <p class="header-text">
           Trusted by
@@ -53,7 +54,7 @@
           <v-icon class="fab fa-critical-role" x-large dark />
           <v-icon class="fab fa-angrycreative" x-large dark />
         </div>
-      </v-container>
+      </div>
       <v-container
         class="images-division1"
         text-xs-center
@@ -62,7 +63,17 @@
         justify-center
         fluid
       >
-        <v-img width="100%" src="https://d33wubrfki0l68.cloudfront.net/eda80536f265142b1eb0fe8e33677e6a1dc2e2e4/b2bde/static/img/pages/home/people.jpg" />
+        <div
+          class="img-class-div"
+          data-aos-delay="40"
+          data-aos-duration="1000"
+          data-aos-easing="ease"
+          data-aos="fade-up"
+        >
+          <v-img
+            src="https://d33wubrfki0l68.cloudfront.net/eda80536f265142b1eb0fe8e33677e6a1dc2e2e4/b2bde/static/img/pages/home/people.jpg"
+          />
+        </div>
       </v-container>
       <v-container
         class="images-division2"
@@ -72,7 +83,15 @@
         justify-center
         fluid
       >
-        <v-img absolute src="https://d33wubrfki0l68.cloudfront.net/bac8cd867797d67a9677453aa8d9486622166d28/7c899/static/img/pages/home/process.jpg" />
+        <div
+          class="img-class-div"
+          data-aos-delay="40"
+          data-aos-duration="1000"
+          data-aos-easing="ease"
+          data-aos="fade-up"
+        >
+          <v-img src="https://d33wubrfki0l68.cloudfront.net/bac8cd867797d67a9677453aa8d9486622166d28/7c899/static/img/pages/home/process.jpg" />
+        </div>
       </v-container>
       <v-container
         class="images-division3"
@@ -82,39 +101,117 @@
         justify-center
         fluid
       >
-        <v-img width="100%" src="https://d33wubrfki0l68.cloudfront.net/585004580ab1e448178ef761b55d4f8ac990142d/bef99/static/img/pages/home/technology.jpg" />
+        <div
+          class="img-class-div"
+          data-aos-delay="40"
+          data-aos-duration="1000"
+          data-aos-easing="ease"
+          data-aos="fade-up"
+        >
+          <v-img src="https://d33wubrfki0l68.cloudfront.net/585004580ab1e448178ef761b55d4f8ac990142d/bef99/static/img/pages/home/technology.jpg" />
+        </div>
       </v-container>
+      <div>
+        <div class="pd-b-400" />
+      </div>
     </div>
-    <v-container
-      class="images-division1"
-      text-xs-center
-      wrap
-      align-content-center
-      justify-center
-      fluid
-    >
-      <v-img width="100%" src="https://d33wubrfki0l68.cloudfront.net/eda80536f265142b1eb0fe8e33677e6a1dc2e2e4/b2bde/static/img/pages/home/people.jpg" />
-    </v-container>
-    <v-container
-      class="images-division2"
-      text-xs-center
-      wrap
-      align-content-center
-      justify-center
-      fluid
-    >
-      <v-img absolute src="https://d33wubrfki0l68.cloudfront.net/bac8cd867797d67a9677453aa8d9486622166d28/7c899/static/img/pages/home/process.jpg" />
-    </v-container>
-    <v-container
-      class="images-division3"
-      text-xs-center
-      wrap
-      align-content-center
-      justify-center
-      fluid
-    >
-      <v-img width="100%" src="https://d33wubrfki0l68.cloudfront.net/585004580ab1e448178ef761b55d4f8ac990142d/bef99/static/img/pages/home/technology.jpg" />
-    </v-container>
+    <div class="sec-main">
+      <div class="sec-main-wrapper">
+        <div class="main-heading-sec-form">
+          <p class="heading-top">
+            in the shop
+          </p>
+          <p class="heading-bottom">
+            <span class="heading-bottom-text">Here's what we're<br class="line-break">working on</span>
+          </p>
+        </div>
+        <v-container class="v-cont-div" fluid grid-list-md text-xs-center>
+          <v-layout row wrap>
+            <v-flex xs6>
+              <v-card>
+                <v-img src="https://www.mojotech.com/static/img/pages/home/shop/amica-shop.webp" />
+              </v-card>
+            </v-flex>
+            <v-flex pa-5 xs6>
+              <v-card
+                data-aos-delay="40"
+                data-aos-duration="1000"
+                data-aos-easing="ease"
+                data-aos="fade-up"
+              >
+                <v-img src="https://www.mojotech.com/static/img/pages/home/shop/amica-shop.webp" />
+              </v-card>
+            </v-flex>
+          </v-layout>
+        </v-container>
+        <div>
+          <div class="pd-b-150" />
+        </div>
+        <v-container class="v-cont-div" fluid grid-list-md text-xs-center>
+          <v-layout row wrap>
+            <v-flex pa-5 xs6>
+              <v-card
+                data-aos-delay="40"
+                data-aos-duration="1000"
+                data-aos-easing="ease"
+                data-aos="fade-up"
+              >
+                <v-img src="https://www.mojotech.com/static/img/pages/home/shop/moneylion-shop.webp" />
+              </v-card>
+            </v-flex>
+            <v-flex xs6>
+              <v-card>
+                <v-img src="https://www.mojotech.com/static/img/pages/home/shop/moneylion-shop.webp" />
+              </v-card>
+            </v-flex>
+          </v-layout>
+        </v-container>
+        <div>
+          <div class="pd-b-150" />
+        </div>
+        <v-container class="v-cont-div" fluid grid-list-md text-xs-center>
+          <v-layout row wrap>
+            <v-flex xs6>
+              <v-card>
+                <v-img src="https://www.mojotech.com/static/img/pages/home/shop/credit-karma-shop.webp" />
+              </v-card>
+            </v-flex>
+            <v-flex pa-5 xs6>
+              <v-card
+                data-aos-delay="40"
+                data-aos-duration="1000"
+                data-aos-easing="ease"
+                data-aos="fade-up"
+              >
+                <v-img src="https://www.mojotech.com/static/img/pages/home/shop/credit-karma-shop.webp" />
+              </v-card>
+            </v-flex>
+          </v-layout>
+        </v-container>
+        <div>
+          <div class="pd-b-150" />
+        </div>
+        <v-container class="v-cont-div" fluid grid-list-md text-xs-center>
+          <v-layout row wrap>
+            <v-flex pa-5 xs6>
+              <v-card
+                data-aos-delay="40"
+                data-aos-duration="1000"
+                data-aos-easing="ease"
+                data-aos="fade-up"
+              >
+                <v-img src="https://www.mojotech.com/static/img/pages/home/shop/shell-shop@1x.webp" />
+              </v-card>
+            </v-flex>
+            <v-flex xs6>
+              <v-card>
+                <v-img src="https://www.mojotech.com/static/img/pages/home/shop/shell-shop@1x.webp" />
+              </v-card>
+            </v-flex>
+          </v-layout>
+        </v-container>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -158,7 +255,7 @@ export default {
   background-position: center;
   height: 1440px;
 }
-div{
+.main-1{
   display: block
 }
 .text-header-divider{
@@ -207,7 +304,7 @@ div{
 }
 }
 .card-divider{
-  width: 90%;
+  width: 70%;
   height: 500px;
   margin: auto;
   position: relative;
@@ -217,7 +314,14 @@ div{
 }
 .divder-2{
   padding-top: 15px;
-  width: 70%;
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  position: relative;
 }
 .divder-2 .header-text{
     color: #89979c;
@@ -231,7 +335,8 @@ div{
     line-height: 1.5;
     margin-bottom: 20px;
     text-transform: uppercase;
-    font-weight: bold
+    font-weight: bold;
+    text-align: center
 }
 @media (min-width: 1000px) {
   .text-header-divider{
@@ -288,8 +393,8 @@ h1 .class-info{
 @media (min-width: 1000px) {
   .divder-2{
   margin-top: 140px;
-  /* padding-right: 90px;
-  padding-left: 90px */
+  padding-right: 90px;
+  padding-left: 90px
 }
 }
 .brand-division{
@@ -326,21 +431,135 @@ h1 .class-info{
     -ms-transform: rotate(-8deg);
     transform: rotate(-8deg);
 } */
+.img-class-div{
+  overflow: hidden;
+  width: 100%
+}
 .images-division1{
   padding-left: 70px;
   padding-right: 70px;
-  padding-bottom: 150px;
+  margin-bottom: 70px;
+  animation: fadeInUp 1.4s cubic-bezier(0.645,0.045,0.355,1) forwards;
+  -webkit-animation: fadeInUp 1.4s cubic-bezier(0.645,0.045,0.355,1) forwards;
+}
+@media (min-width: 1000px){
+  .images-division1{
+  max-width: 1200px;
+  margin-bottom: 400px;
+}
+}
+@media (min-width: 1000px){
+  .images-division1{
+  animation: zoomOut 1s ease .2s;
+  -webkit-animation: zoomOut 1s ease .2s;
+}
+}
+@media (min-width: 700px){
+  .images-division1{
+  height: 500px;
+  margin-bottom: 300px
+}
 }
 .images-division2{
   padding-left: 70px;
   padding-right: 70px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  animation: fadeInUp 1.4s cubic-bezier(0.645,0.045,0.355,1) forwards;
+  -webkit-animation: fadeInUp 1.4s cubic-bezier(0.645,0.045,0.355,1) forwards;
+}
+@media (min-width: 1000px){
+  .images-division2{
+  max-width: 1200px;
   margin-top: 150px;
-  padding-bottom: 150px;
+  margin-bottom: 400px
+}
+}
+@media (min-width: 700px){
+  .images-division2{
+  height: 500px;
+  margin-top: 150px;
+  margin-bottom: 300px
+}
 }
 .images-division3{
   padding-left: 70px;
   padding-right: 70px;
-  margin-top: 150px;
-  padding-bottom: 150px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  animation: fadeInUp 1.4s cubic-bezier(0.645,0.045,0.355,1) forwards;
+  -webkit-animation: fadeInUp  1.4s cubic-bezier(0.645,0.045,0.355,1) forwards;
 }
+@media (min-width: 1000px){
+  .images-division3{
+  max-width: 1200px;
+  margin-top: 150px;
+  margin-bottom: 400px
+}
+}
+@media (min-width: 700px){
+  .images-division3{
+  height: 500px;
+  margin-top: 70px;
+  margin-bottom: 70px
+}
+}
+.pd-b-400{
+  padding-bottom: 380px
+}
+.sec-main-wrapper{
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto
+}
+@media (min-width: 1000px) {
+  .sec-main-wrapper{
+  padding-left: 100px;
+  padding-right: 100px;
+}
+}
+.main-heading-sec-form{
+  margin-top: 50px;
+  margin-left: 50px;
+}
+  @media (min-width: 1000px) {
+  .main-heading-sec-form{
+    margin-top: 150px;
+    margin-left: 150px;
+    }
+  }
+.heading-top{
+  color: #89979c;
+  font-family: Altis-Bold,-apple-system,BlinkMacSystemFont,Segoe UI, Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue, sans-serif;
+  text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+.heading-bottom{
+  color: #48101d;
+  font-family: Altis-Bold,-apple-system,BlinkMacSystemFont,Segoe UI, Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue, sans-serif;
+  font-size: 4rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  }
+  @media (min-width: 1000px) {
+    .heading-bottom{
+      font-size: 6rem;
+    }
+  }
+  .image-card{
+    /* animation: fadeInUp 1.4s cubic-bezier(0.645,0.045,0.355,1) forwards;
+    -webkit-animation: fadeInUp 1.4s cubic-bezier(0.645,0.045,0.355,1) forwards; */
+  }
+  /* .spacer-btwn{
+    display: block;
+  } */
+  .pd-b-150{
+    padding-bottom: 150px
+  }
 </style>
