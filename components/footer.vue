@@ -17,17 +17,21 @@
               </v-card-text>
             </v-card>
           </v-flex>
-          <v-flex xs6>
+          <v-flex xs3>
+            <v-card flat color="rgba(255,255,255,0)" class="text-xs-center" />
+          </v-flex>
+          <v-flex xs3>
             <v-card flat color="rgba(255,255,255,0)" class="text-xs-center">
-              <v-input>
-                Enter your name
-              </v-input>
+              <v-text-field placeholder="Your name" />
             </v-card>
           </v-flex>
-          <v-flex xs6>
+          <v-flex xs3>
             <v-card flat color="rgba(255,255,255,0)" class="text-xs-center">
-              <v-input>Enter your name</v-input>
+              <v-text-field placeholder="Your email" />
             </v-card>
+          </v-flex>
+          <v-flex xs3>
+            <v-card flat color="rgba(255,255,255,0)" class="text-xs-center" />
           </v-flex>
         </v-layout>
       </v-container>
