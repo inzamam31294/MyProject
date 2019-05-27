@@ -124,7 +124,7 @@
       <v-icon small color="white" class="fas fa-user-friends" />
     </v-btn>
     <!-- <v-footer
-      :fixed="fixed"
+      absolute
       class="footer"
       app
       dark
@@ -201,9 +201,10 @@ export default {
   display: flex;
 }
 .toolbar-header{
-  background: rgba(255,255,255,0);
+  background: #000;
+  /* background: rgba(255,255,255,0);
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 15px; */
 }
 .navbar{
   background-color: #000;

@@ -125,7 +125,7 @@
             <span class="heading-bottom-text">Here's what we're<br class="line-break">working on</span>
           </p>
         </div>
-        <v-container class="v-cont-div" fluid grid-list-md text-xs-center>
+        <v-container class="v-cont-div1" fluid grid-list-md text-xs-center>
           <v-layout row wrap>
             <v-flex xs6>
               <v-card>
@@ -147,7 +147,7 @@
         <div>
           <div class="pd-b-150" />
         </div>
-        <v-container class="v-cont-div" fluid grid-list-md text-xs-center>
+        <v-container class="v-cont-div2" fluid grid-list-md text-xs-center>
           <v-layout row wrap>
             <v-flex pa-5 xs6>
               <v-card
@@ -169,7 +169,7 @@
         <div>
           <div class="pd-b-150" />
         </div>
-        <v-container class="v-cont-div" fluid grid-list-md text-xs-center>
+        <v-container class="v-cont-div3" fluid grid-list-md text-xs-center>
           <v-layout row wrap>
             <v-flex xs6>
               <v-card>
@@ -191,7 +191,7 @@
         <div>
           <div class="pd-b-150" />
         </div>
-        <v-container class="v-cont-div" fluid grid-list-md text-xs-center>
+        <v-container class="v-cont-div4" fluid grid-list-md text-xs-center>
           <v-layout row wrap>
             <v-flex pa-5 xs6>
               <v-card
@@ -211,16 +211,45 @@
           </v-layout>
         </v-container>
       </div>
+      <div class="p-t-b-200px">
+        <div class="p-t-b-200px-div">
+          <v-btn flat class="max-width-btn">
+            <a href="#" class="max-width-btn-a">
+              <span>See more completed projects</span>
+              <span><v-icon color="green" pa-5 class="fas fa-arrow-right" /></span>
+            </a>
+          </v-btn>
+        </div>
+      </div>
+    </div>
+    <div>
+      <v-container class="bottom-image-cont" fluid grid-list-md text-xs-center>
+        <v-layout row wrap>
+          <v-flex pa-5 xs6>
+            <v-card />
+          </v-flex>
+          <v-flex xs6>
+            <v-card flat color="rgba(255,255,255,0)" class="iphone-img">
+              <v-img src="https://www.mojotech.com/static/img/pages/home/countr-iphone.png" />
+            </v-card>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </div>
+    <div class="footer-div">
+      <footers />
     </div>
   </div>
 </template>
 
 <script>
 import Layout from '~/components/default.vue'
+import footers from '~/components/footer.vue'
 
 export default {
   components: {
-    Layout
+    Layout,
+    footers
   },
   computed: {
     // myCanvas: function () {
@@ -532,11 +561,11 @@ h1 .class-info{
   color: #89979c;
   font-family: Altis-Bold,-apple-system,BlinkMacSystemFont,Segoe UI, Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue, sans-serif;
   text-transform: uppercase;
-    font-size: 1rem;
-    letter-spacing: 1px;
-    line-height: 1.5;
-    margin-bottom: 15px;
-    font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  font-weight: bold;
   }
 .heading-bottom{
   color: #48101d;
@@ -561,5 +590,98 @@ h1 .class-info{
   } */
   .pd-b-150{
     padding-bottom: 150px
+  }
+  /* .sec-main{
+    padding-bottom: 1000px;
+  } */
+  /* .v-cont-div4{
+    padding-bottom: 600px
+  } */
+  .footer-div{
+    position: absolute;
+    width: 100%;
+    margin-top: 20px
+  }
+  .p-t-b-200px{
+    padding-top: 100px;
+    padding-bottom: 200px
+  }
+  .p-t-b-200px-div{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(6, 6, 6, 0.05) 0px 10px 80px 0px;
+
+  }
+  @media (min-width: 1000px) {
+    .p-t-b-200px-div{
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+  }
+    @media (min-width: 700px) {
+    .p-t-b-200px-div{
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+  .max-width-btn{
+    max-width: 1400px;
+    width: 100%;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto
+  }
+  @media (min-width: 1000px) {
+    .max-width-btn{
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+  }
+  @media (max-width: 700px) {
+    .max-width-btn{
+      width: 300px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+  .max-width-btn-a{
+    color: rgb(137, 151, 156);
+    display: block;
+    text-decoration: none;
+    font-size: 1.8rem;
+  }
+  @media (max-width: 700px) {
+     .max-width-btn-a{
+    color: rgb(137, 151, 156);
+    font-size: 1rem;
+  }
+  }
+  .bottom-image-cont{
+    padding-bottom: 650px;
+  }
+  .iphone-img{
+    border-style: none;
+    position: absolute;
+    z-index: 10;
+  }
+  @media (min-width: 1000px) {
+      .iphone-img{
+    width: 600px;
+    right: -50px;
+  }
+  }
+  /* @media (min-width: 700px) {
+      .iphone-img{
+    bottom: -290px
+  }
+  } */
+  .iphone-img-img{
+    width: 100%;
+    border-style: none
   }
 </style>
