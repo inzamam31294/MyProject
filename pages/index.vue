@@ -662,7 +662,7 @@ h1 .class-info{
   }
   }
   .bottom-image-cont{
-    padding-bottom: 650px;
+    padding-bottom: 2000px;
   }
   .iphone-img{
     border-style: none;

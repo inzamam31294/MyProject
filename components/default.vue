@@ -118,19 +118,11 @@
       class="btn-sidebar-usermenu"
       fab
       large
-      style="z-index: 9;"
+      style="z-index: 100;"
       @click.stop="rightDrawer = !rightDrawer"
     >
       <v-icon small color="white" class="fas fa-user-friends" />
     </v-btn>
-    <!-- <v-footer
-      absolute
-      class="footer"
-      app
-      dark
-    >
-      <span>&copy; 2019</span>
-    </v-footer> -->
   </div>
 </template>
 
