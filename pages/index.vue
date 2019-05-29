@@ -62,6 +62,7 @@
         align-content-center
         justify-center
         fluid
+        xs12
       >
         <div
           class="img-class-div"
@@ -71,8 +72,10 @@
           data-aos="fade-up"
         >
           <v-img
+            class="img-class-img"
             src="https://d33wubrfki0l68.cloudfront.net/eda80536f265142b1eb0fe8e33677e6a1dc2e2e4/b2bde/static/img/pages/home/people.jpg"
           />
+          <figcaption><div>Thumbnail Text</div></figcaption>
         </div>
       </v-container>
       <v-container
@@ -90,7 +93,11 @@
           data-aos-easing="ease"
           data-aos="fade-up"
         >
-          <v-img src="https://d33wubrfki0l68.cloudfront.net/bac8cd867797d67a9677453aa8d9486622166d28/7c899/static/img/pages/home/process.jpg" />
+          <v-img
+            class="img-class-img"
+            src="https://d33wubrfki0l68.cloudfront.net/bac8cd867797d67a9677453aa8d9486622166d28/7c899/static/img/pages/home/process.jpg"
+          />
+          <figcaption><div>Thumbnail Text</div></figcaption>
         </div>
       </v-container>
       <v-container
@@ -108,7 +115,11 @@
           data-aos-easing="ease"
           data-aos="fade-up"
         >
-          <v-img src="https://d33wubrfki0l68.cloudfront.net/585004580ab1e448178ef761b55d4f8ac990142d/bef99/static/img/pages/home/technology.jpg" />
+          <v-img
+            class="img-class-img"
+            src="https://d33wubrfki0l68.cloudfront.net/585004580ab1e448178ef761b55d4f8ac990142d/bef99/static/img/pages/home/technology.jpg"
+          />
+          <figcaption><div>Thumbnail Text</div></figcaption>
         </div>
       </v-container>
       <div>
@@ -460,14 +471,78 @@ h1 .class-info{
     -ms-transform: rotate(-8deg);
     transform: rotate(-8deg);
 } */
+*, *::before, *::after{
+  -moz-box-sizing: border-box;
+   box-sizing: border-box;
+  -webkit-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+}
 .img-class-div{
   overflow: hidden;
-  width: 100%
+  width: 100%;
+  perspective: 1000px;
+  position: relative;
+  display: inline-block;
+}
+figcaption{
+  position: absolute;
+  left: 0; right: 0;
+  top: 0; bottom: 0;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  width: 100%;
+  height: 600px;
+  display: table;
+}
+
+figcaption div{
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  top: 20px;
+  opacity: 0;
+  color: whitesmoke;
+  text-transform: uppercase;
+}
+figcaption div:after{
+  position: absolute;
+  content: "";
+  left: 0; right: 0;
+  bottom: 40%;
+  text-align: center;
+  margin: auto;
+  width: 0%;
+  height: 2px;
+  background: whitesmoke
+}
+.img-class-div .img-class-img{
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+}
+.img-class-div:hover figcaption{
+ background: rgba(23, 28, 31, 0.9);
+ /* opacity: 0.5; */
+}
+figcaption:hover div{
+  opacity: 1;
+  top: 0;
+}
+
+figcaption:hover div:after{
+  width: 50%;
+}
+.img-class-div:hover .img-class-img, .img-class-div:active .img-class-img {
+  -webkit-transform: scale3d(.5, 1.5, .5);
+  transform: scale3d(.5, 1.5, .5);
 }
 .images-division1{
-  padding-left: 70px;
-  padding-right: 70px;
+  /* padding-left: 70px;
+  padding-right: 70px; */
   margin-bottom: 70px;
+  display: block;
   animation: fadeInUp 1.4s cubic-bezier(0.645,0.045,0.355,1) forwards;
   -webkit-animation: fadeInUp 1.4s cubic-bezier(0.645,0.045,0.355,1) forwards;
 }
@@ -477,12 +552,7 @@ h1 .class-info{
   margin-bottom: 400px;
 }
 }
-@media (min-width: 1000px){
-  .images-division1{
-  animation: zoomOut 1s ease .2s;
-  -webkit-animation: zoomOut 1s ease .2s;
-}
-}
+
 @media (min-width: 700px){
   .images-division1{
   height: 500px;
@@ -490,10 +560,11 @@ h1 .class-info{
 }
 }
 .images-division2{
-  padding-left: 70px;
-  padding-right: 70px;
+  /* padding-left: 70px;
+  padding-right: 70px; */
   margin-top: 70px;
   margin-bottom: 70px;
+  display: block;
   animation: fadeInUp 1.4s cubic-bezier(0.645,0.045,0.355,1) forwards;
   -webkit-animation: fadeInUp 1.4s cubic-bezier(0.645,0.045,0.355,1) forwards;
 }
@@ -512,10 +583,11 @@ h1 .class-info{
 }
 }
 .images-division3{
-  padding-left: 70px;
-  padding-right: 70px;
+  /* padding-left: 70px;
+  padding-right: 70px; */
   margin-top: 70px;
   margin-bottom: 70px;
+  display: block;
   animation: fadeInUp 1.4s cubic-bezier(0.645,0.045,0.355,1) forwards;
   -webkit-animation: fadeInUp  1.4s cubic-bezier(0.645,0.045,0.355,1) forwards;
 }
@@ -662,7 +734,7 @@ h1 .class-info{
   }
   }
   .bottom-image-cont{
-    padding-bottom: 2000px;
+    padding-bottom: 3000px;
   }
   .iphone-img{
     border-style: none;

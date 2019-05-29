@@ -22,12 +22,12 @@
           </v-flex>
           <v-flex pt-5 pr-3 xs3>
             <v-card flat color="rgba(255,255,255,0)" class="text-xs-center">
-              <v-text-field solo-inverted flat placeholder="Your name" />
+              <v-text-field background-color="rgb(33, 40, 44)" solo-inverted flat placeholder="Your name" />
             </v-card>
           </v-flex>
           <v-flex pt-5 pl-1 xs3>
             <v-card flat color="rgba(255,255,255,0)" class="text-xs-center">
-              <v-text-field solo-inverted flat placeholder="Your email" />
+              <v-text-field background-color="rgb(33, 40, 44)" solo-inverted flat placeholder="Your email" />
             </v-card>
           </v-flex>
           <v-flex px-5 xs3>
@@ -38,7 +38,14 @@
           </v-flex>
           <v-flex xs6>
             <v-card flat color="rgba(255,255,255,0)" class="text-xs-center">
-              <v-textarea pb-5 flat solo-inverted placeholder="What problem you are trying to solve?" />
+              <v-textarea
+                background-color="rgb(33, 40, 44)"
+                rows="15"
+                pb-5
+                flat
+                solo-inverted
+                placeholder="What problem you are trying to solve?"
+              />
             </v-card>
           </v-flex>
           <v-flex xs3>
@@ -58,30 +65,46 @@
       <v-container class="v-cont-div-sec" fluid text-xs-center>
         <v-layout>
           <v-flex xs12 xl6 offset-xl3>
-            <v-card color="#1f2629" height="auto">
+            <v-card class="v-cont-div-sec-card" flat tile color="rgb(31, 38, 41)" height="auto">
               <v-container class="pics-grid-list" fluid>
                 <v-layout row wrap>
                   <v-flex xs4>
-                    <v-card>
+                    <v-card class="grid-imgs" flat tile color="rgb(31, 38, 41)">
                       <v-img height="375px" src="https://d33wubrfki0l68.cloudfront.net/2b2ea4f057034dafc0f4ce6e4cd5f5868064ef15/9ea77/static/img/resources/cloud-native.jpg" />
                     </v-card>
-                    <v-card color="#000" height="375px" />
+                    <v-card class="grid-imgs" color="#000" height="375px" />
                   </v-flex>
                   <v-flex xs4>
-                    <v-card color="#000" height="375px" />
-                    <v-card>
+                    <v-card class="grid-imgs" color="#000" height="375px" />
+                    <v-card class="grid-imgs" flat tile color="rgb(31, 38, 41)">
                       <v-img height="375px" src="https://d33wubrfki0l68.cloudfront.net/ff9dff53c8d482b1db54df74419e3b61eacf6610/96c59/static/img/resources/pm-diagram.jpg" />
                     </v-card>
                   </v-flex>
                   <v-flex xs4>
-                    <v-card>
+                    <v-card class="grid-imgs" flat tile color="rgb(31, 38, 41)">
                       <v-img height="375px" src="https://d33wubrfki0l68.cloudfront.net/ceb59eda91b56dbc65fcad73227f40680674fe3c/494ae/static/img/resources/storey-photo.jpg" />
                     </v-card>
-                    <v-card color="#000" height="375px" />
+                    <v-card class="grid-imgs" color="#000" height="375px" />
                   </v-flex>
                 </v-layout>
               </v-container>
             </v-card>
+          </v-flex>
+        </v-layout>
+      </v-container>
+      <v-container class="address-map-cont" xs12 fluid grid-list-md text-xs-center>
+        <v-layout>
+          <v-flex xs3>
+            <v-card color="#212121" flat height="200px" />
+          </v-flex>
+          <v-flex xs3>
+            <v-card color="#212121" flat height="200px" />
+          </v-flex>
+          <v-flex xs3>
+            <v-card color="#212121" flat height="200px" />
+          </v-flex>
+          <v-flex xs3>
+            <v-card color="#212121" flat height="200px" />
           </v-flex>
         </v-layout>
       </v-container>
@@ -99,7 +122,7 @@
     width: 100%
 }
 .space-div2{
-    height: 50px;
+    height: 100px;
     width: 100%
 }
 .footer-top-header{
@@ -112,12 +135,12 @@
 .textarea-bottom-cntnt{
   width: 100%;
   display: flex;
+  max-width: 600px;
   justify-content: space-between;
-  align-content: center;
   align-items: center;
-  flex-direction: row;
-  padding-left: 350px;
-  padding-right: 350px
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
 }
 .textarea-bottom-cntnt-left{
   /* padding-right: 400px; */
@@ -133,7 +156,31 @@
 .textarea-bottom-cntnt-right{
   justify-content: space-between
 }
-.pics-grid-list{
+.v-cont-div-sec{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
+  width: 100%
+}
+@media (min-width: 1000px) {
+  .v-cont-div-sec-card{
+  padding: 80px;
+  max-width: 1400px;
+  background:  #1f2629;
+}
+}
+.grid-imgs:hover{
+  transform: scale(.95)
+}
+/* @media (min-width: 700px) {
+  .v-cont-div-sec{
+  padding: 40px;
+}
+} */
+/* .pics-grid-list{
+  padding: 100px
+} */
+.address-map-cont{
   padding: 100px
 }
 </style>
