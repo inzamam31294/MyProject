@@ -3,8 +3,8 @@
     <v-navigation-drawer
       v-model="drawer"
       class="navbar"
-      :mini-variant="miniVariant"
-      :clipped="clipped"
+      :left="left"
+      temporary
       fixed
       style="z-index: 1000;"
       app

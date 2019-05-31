@@ -94,6 +94,39 @@
       </v-container>
       <v-container class="address-map-cont" xs12 fluid grid-list-md text-xs-center>
         <v-layout>
+          <v-flex xs3 sm4>
+            <v-card color="#212121" flat>
+              <v-flex sm4 offset-xs6>
+                <v-img class="map-img" background-position="right" src="https://d33wubrfki0l68.cloudfront.net/5ff09603fae181dd21437be63b62eb0491b73e79/abc48/static/img/pages/contact/pvd.svg" />
+              </v-flex>
+            </v-card>
+          </v-flex>
+          <v-flex xs3 sm4>
+            <v-card color="#212121" flat>
+              <v-flex sm4 offset-xs3>
+                <v-img class="map-img" src="https://d33wubrfki0l68.cloudfront.net/000e3db2cd74b34b4dad50c01a05c2153e58fbf9/56012/static/img/pages/contact/bldr.svg" />
+              </v-flex>
+            </v-card>
+          </v-flex>
+          <v-flex xs3 sm4>
+            <v-card color="#212121" flat>
+              <v-flex sm5 offset-xs2>
+                <v-img class="map-img" src="https://d33wubrfki0l68.cloudfront.net/e64dca73b12959494ef98770b1da87eb1715c467/e2f0e/static/img/pages/contact/nyc.svg" />
+              </v-flex>
+            </v-card>
+          </v-flex>
+          <v-flex xs3 sm4>
+            <v-card color="#212121" flat>
+              <v-flex sm3 offset-xs2>
+                <v-img class="map-img" src="https://d33wubrfki0l68.cloudfront.net/657d6854c04feebf8b62fd3085dc53a816b0855e/6d25a/static/img/locations/california.svg" />
+              </v-flex>
+            </v-card>
+          </v-flex>
+        </v-layout>
+      </v-container>
+      <v-divider light />
+      <v-container class="address-map-cont" xs12 fluid grid-list-md text-xs-center>
+        <v-layout>
           <v-flex xs3>
             <v-card color="#212121" flat height="200px" />
           </v-flex>
@@ -182,5 +215,11 @@
 } */
 .address-map-cont{
   padding: 100px
+}
+.map-img{
+  /* position: absolute; */
+  max-width: 100%;
+  top: 0;
+  left: 0px;
 }
 </style>

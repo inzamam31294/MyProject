@@ -256,7 +256,6 @@
 <script>
 import Layout from '~/components/default.vue'
 import footers from '~/components/footer.vue'
-
 export default {
   components: {
     Layout,
@@ -266,22 +265,17 @@ export default {
     // myCanvas: function () {
     //   const canvas = document.getElementById('canvas')
     //   const ctx = canvas.getContext('2d')
-
     //   canvas.width = 2000
     //   canvas.height = 2526
-
     //   const background = new Image()
     //   background.src = 'https://images.unsplash.com/photo-1486783046960-64d2ef697c46?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'
-
     //   background.onload = function () {
     //     ctx.drawImage(background, 0, 0)
     //   }
     //   return (canvas)
     // }
   }
-
 }
-
 </script>
 
 <style scoped>
@@ -290,6 +284,8 @@ export default {
 }
 #inspire{
   background-image: url("https://images.unsplash.com/photo-1486783046960-64d2ef697c46?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
+  /* background-image: url("https://jackmcdade.com/site/themes/storyteller/img/moon2.jpg");
+  background-image: url("https://jackmcdade.com/assets/img/blog/geometric-shapes.jpg"); */
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -400,7 +396,6 @@ export default {
 }
 h1 .class-info{
   font-family: GT America,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto, Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-
 }
 .class-info{
   color: whitesmoke;
@@ -494,28 +489,47 @@ figcaption{
   width: 100%;
   height: 600px;
   display: table;
+  border-left: 0px solid #171c1f;
+  border-right: 0px solid #171c1f;
+  transition: all .5s ease-in-out;
+    font-size: 40px;
+    left: 50%;
+    margin: 0 auto;
+    padding: 0 20px;
+    top: 50%;
+    -webkit-transform: translate3d(-50%,-50%,0);
+    -webkit-transform: translate3d(-50%,-50%,0);
+    -ms-transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-50%,0);
 }
-
+figcaption:hover {
+  border-left: 250px solid #171c1f;
+  border-right: 250px solid #171c1f;
+}
 figcaption div{
   display: table-cell;
   vertical-align: middle;
   position: relative;
   top: 20px;
+  width: 100%;
+  height: 600px;
   opacity: 0;
   color: whitesmoke;
   text-transform: uppercase;
 }
-figcaption div:after{
+/* figcaption div:after{
   position: absolute;
   content: "";
   left: 0; right: 0;
   bottom: 40%;
   text-align: center;
+  width: 50%;
+  height: 600px;
   margin: auto;
   width: 0%;
   height: 2px;
   background: whitesmoke
-}
+} */
 .img-class-div .img-class-img{
   -webkit-transition: all 0.5s ease;
           transition: all 0.5s ease;
@@ -530,13 +544,15 @@ figcaption:hover div{
   opacity: 1;
   top: 0;
 }
-
 figcaption:hover div:after{
   width: 50%;
 }
+/* .img-class-img:hover{
+  max-width: 500px;
+} */
 .img-class-div:hover .img-class-img, .img-class-div:active .img-class-img {
-  -webkit-transform: scale3d(.5, 1.5, .5);
-  transform: scale3d(.5, 1.5, .5);
+  -webkit-transform: scale3d(1.5, 1.5, 1.5);
+  transform: scale3d(1.5, 1.5, 1.5);
 }
 .images-division1{
   /* padding-left: 70px;
@@ -552,7 +568,6 @@ figcaption:hover div:after{
   margin-bottom: 400px;
 }
 }
-
 @media (min-width: 700px){
   .images-division1{
   height: 500px;
@@ -672,7 +687,7 @@ figcaption:hover div:after{
   .footer-div{
     position: absolute;
     width: 100%;
-    margin-top: 20px
+    /* margin-top: 20px */
   }
   .p-t-b-200px{
     padding-top: 100px;
@@ -687,7 +702,6 @@ figcaption:hover div:after{
     margin-left: auto;
     margin-right: auto;
     box-shadow: rgba(6, 6, 6, 0.05) 0px 10px 80px 0px;
-
   }
   @media (min-width: 1000px) {
     .p-t-b-200px-div{
